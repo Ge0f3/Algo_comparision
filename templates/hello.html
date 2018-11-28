@@ -75,7 +75,7 @@
     </div>
     <div class="container">
         <div class="row">
-             <div class="col">
+            <div class="col">
                 <div class="card">
                     <div class="card-body">
                         <div id="showresults">
@@ -84,6 +84,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+             
             <div class="col">
                 <div class="card" ng-controller='Hello'>
                     <div class="card-header">
@@ -132,9 +137,9 @@
     				data:JSON.stringify($("#list").val()),
     				success:function(result){
     					//var json_result = JSON.parse(result)
-    					swal("The sorted array is "+result)
-                        var out  = result 
-                        var result = $('<h1>The Sorted array is </h2><p><div/>').append(result).html();
+    					//swal("The sorted array is "+result)
+                        var out  = JSON.stringify(result)
+                        var result = $('<h1>The Sorted array is </h2><p><div/>').append((out)).html();
                         $('#showresults').html(result)
 
     				},

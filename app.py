@@ -45,7 +45,7 @@ def user(name):
 @app.route('/api',methods=['POST','GET'])
 def sort():
 	lis = request.get_json(force=True)
-	#app.logger.info("The lis is a list {} ".format(lis))
+	app.logger.info("The lis is a list {} ".format(type(lis)))
 	if(lis):
 		lis = [int(x) for x in lis.split(',')]
 		start = time.time()
@@ -59,7 +59,7 @@ def sort():
 		
 		return jsonify(nums)
 	else:
-		return jsonify("List is empty ")
+		return jsonify("The the  List is empty ")
 
 
 if __name__ == '__main__':
